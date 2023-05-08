@@ -23,10 +23,10 @@ void main() {
             "/": (context) => First_Screen(),
           },
           theme: ThemeData(
-                      bottomNavigationBarTheme: BottomNavigationBarThemeData(
-                        backgroundColor: Colors.black87,
-                        elevation: 0
-                      )
+              bottomNavigationBarTheme: BottomNavigationBarThemeData(
+                backgroundColor: Colors.black87,
+                elevation: 0
+              )
           ),
         ),
       ),

@@ -12,6 +12,8 @@ class First_Screen extends StatefulWidget {
 
 class _First_ScreenState extends State<First_Screen> {
 
+
+
   BeatProvider? beatT;
   BeatProvider? beatF;
   @override
@@ -23,13 +25,14 @@ class _First_ScreenState extends State<First_Screen> {
     return SafeArea(
       child: Scaffold(
 
-
          bottomNavigationBar:  BottomNavigationBar(
-           type: BottomNavigationBarType.fixed,
-           selectedItemColor: Colors.orange,
+            type: BottomNavigationBarType.fixed,
+            selectedItemColor: Colors.orange,
             unselectedItemColor: Colors.white,
             selectedFontSize: 12,
             unselectedFontSize: 10,
+            selectedIconTheme: IconThemeData(size: 25),
+            unselectedIconTheme: IconThemeData(size: 18),
             showUnselectedLabels: true,
             showSelectedLabels: true,
 
@@ -47,6 +50,8 @@ class _First_ScreenState extends State<First_Screen> {
                   BottomNavigationBarItem(icon: Icon(Icons.settings),label: "Settings"),
                 ],
               ),
+
+        body: beatF!.screens[beatT!.selectedbottom],
 
             ),
 
