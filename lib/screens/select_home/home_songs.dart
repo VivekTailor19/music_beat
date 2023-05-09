@@ -16,6 +16,12 @@ class _Home_SongsState extends State<Home_Songs> {
   BeatProvider? beatT;
   BeatProvider? beatF;
 
+ @override
+  void initState() {
+   Provider.of<BeatProvider>(listen: false, context).initmus();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     beatT = Provider.of<BeatProvider>(listen: true, context);
@@ -31,6 +37,8 @@ class _Home_SongsState extends State<Home_Songs> {
               padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
               child: InkWell(
                 onTap: () {
+
+                  beatT!.clickedmusic = index;
                   Navigator.pushNamed(context, 'openmusic',arguments: index);
 
                 },
