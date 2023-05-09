@@ -20,7 +20,7 @@ void main() {
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          initialRoute: "openmusic",
+          //initialRoute: "openmusic",
           routes: {
             "/": (context) => First_Screen(),
             "openmusic":(context) => Open_Music()

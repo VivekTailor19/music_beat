@@ -31,6 +31,7 @@ class _Home_SongsState extends State<Home_Songs> {
               padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
               child: InkWell(
                 onTap: () {
+                  Navigator.pushNamed(context, 'openmusic',arguments: index);
 
                 },
                 child: Container(

@@ -11,6 +11,8 @@ class Open_Music extends StatefulWidget {
 class _Open_MusicState extends State<Open_Music> {
   @override
   Widget build(BuildContext context) {
+
+    int index = ModalRoute.of(context)!.settings.arguments as int;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.transparent,
