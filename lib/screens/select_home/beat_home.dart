@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:music_beat/screens/select_playlist/beat_playlist.dart';
 import 'package:music_beat/screens/select_setting/beat_setting.dart';
 
+import 'home_songs.dart';
+
 class Beat_Home extends StatefulWidget {
   const Beat_Home({Key? key}) : super(key: key);
 
@@ -23,6 +25,8 @@ class _Beat_HomeState extends State<Beat_Home> {
           appBar: AppBar(
             elevation: 0,
             title: Text("Beat Box",style: TextStyle(fontSize: 25),),
+            backgroundColor: Colors.black,
+
             actions: [
               Padding(
                padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -48,7 +52,7 @@ class _Beat_HomeState extends State<Beat_Home> {
           body: TabBarView(
             children: [
               Beat_Playlist(),
-              Beat_Playlist(),
+              Home_Songs(),
               Beat_Setting(),
               Beat_Playlist(),
               Beat_Setting()
