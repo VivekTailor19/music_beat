@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:music_beat/provider/beat_provider.dart';
 import 'package:music_beat/screens/openmusic.dart';
+import 'package:music_beat/screens/select_setting/beat_setting.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
@@ -20,10 +21,12 @@ void main() {
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          //initialRoute: "openmusic",
+          // initialRoute: "setting",
           routes: {
             "/": (context) => First_Screen(),
-            "openmusic":(context) => Open_Music()
+            "openmusic":(context) => Open_Music(),
+            "setting":(context) => Beat_Setting(),
+
           },
           theme: ThemeData(
               bottomNavigationBarTheme: BottomNavigationBarThemeData(

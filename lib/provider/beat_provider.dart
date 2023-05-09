@@ -44,6 +44,7 @@ class BeatProvider extends ChangeNotifier {
             "https://images.hindustantimes.com/img/2021/11/10/1600x900/RRR_1636548612389_1636548617309.PNG",
         songpath: Audio("assets/audio/naacho.mp3")),
   ];
+  List<BeatModel> likeitems = [];
 
   void openmusictab() {}
 
