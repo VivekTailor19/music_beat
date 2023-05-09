@@ -39,6 +39,7 @@ class _Open_MusicState extends State<Open_Music> {
 
            Spacer(),
 
+
            PlayerBuilder.currentPosition(
              player: beatF!.beatobject,
              builder: (context, position) {
