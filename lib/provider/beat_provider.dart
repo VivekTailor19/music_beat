@@ -86,6 +86,7 @@ class BeatProvider extends ChangeNotifier {
       }
     notifyListeners();
   }
+
   void beatprevious()
   {
     beatobject.previous();

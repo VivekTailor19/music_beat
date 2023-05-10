@@ -53,7 +53,7 @@ class _Open_MusicState extends State<Open_Music> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
                 //image: DecorationImage(image: NetworkImage("https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"),fit: BoxFit.fill)
-                image: DecorationImage(image: NetworkImage("${beatT!.musicitems[index].songbg}"),fit: BoxFit.fill)
+                image: DecorationImage(image: NetworkImage("${beatT!.musicitems[beatT!.clickedmusic].songbg}"),fit: BoxFit.fill)
               ),
             ),
 
