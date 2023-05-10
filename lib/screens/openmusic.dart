@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:music_beat/provider/beat_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:sizer/sizer.dart';
 
 class Open_Music extends StatefulWidget {
   const Open_Music({Key? key}) : super(key: key);
@@ -26,16 +27,31 @@ class _Open_MusicState extends State<Open_Music> {
 
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          leading: IconButton(icon: Icon(Icons.arrow_back),iconSize: 25,color: Colors.white,onPressed: () => Navigator.pop(context),),
+          actions: [Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Icon(Icons.adjust_rounded,size: 25,color: Colors.white,),
+          )],
+        ),
         //backgroundColor: Colors.transparent,
-        backgroundColor: Colors.purple.shade900,
+        backgroundColor: Colors.black,
 
         body: Column(
 
           children: [
-            SizedBox(height: 50,),
+            SizedBox(height: 30,),
+            Container(
+              height: 40.h,width: 40.h,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25),
+                //image: DecorationImage(image: NetworkImage("https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"),fit: BoxFit.fill)
+                image: DecorationImage(image: NetworkImage("${beatT!.musicitems[index].songbg}"),fit: BoxFit.fill)
+              ),
+            ),
 
-            //Image.network("https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg",height: 300,width: 300,fit: BoxFit.fill,),
-            Image.network("${beatT!.musicitems[index].songbg}",height: 300,width: 300,fit: BoxFit.fill,),
+            // Image.network("${beatT!.musicitems[index].songbg}",height: 300,width: 300,fit: BoxFit.fill,),
 
            Spacer(),
 
@@ -46,23 +62,26 @@ class _Open_MusicState extends State<Open_Music> {
                return Column(
                  children: [
                    Slider(
+                     max:beatT!.musiclength.inSeconds.toDouble(),
                      value: position.inSeconds.toDouble(),
+
                      onChanged: (value) {
 
                        position = Duration(seconds: value.toInt());
                        beatF!.beatobject.seek(position);
 
                      },
-                     thumbColor: Colors.amber,
-                     activeColor: Colors.amber,
-                     inactiveColor: Colors.amber.shade100,
+
+                     thumbColor: Colors.orange,
+                     activeColor: Colors.orange,
+                     inactiveColor: Colors.orange.shade100,
                    ),
 
                    Row(
-                     mainAxisAlignment: MainAxisAlignment.spaceAround,
+                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                      children: [
-                       Text("${position}",style: TextStyle(fontSize: 25,color: Colors.white),),
-                       Text("${beatT!.musiclength}",style: TextStyle(fontSize: 25,color: Colors.white),),
+                       Text("${position}",style: TextStyle(fontSize: 15,color: Colors.white),),
+                       Text("${beatT!.musiclength}",style: TextStyle(fontSize: 15,color: Colors.white),),
                      ],),
 
                    Row(
@@ -78,7 +97,7 @@ class _Open_MusicState extends State<Open_Music> {
 
                        },
                          child: Icon(beatT!.isplay == false ? Icons.play_arrow_rounded: Icons.pause,color: Colors.black,size: 45,),
-                         backgroundColor: Colors.amber,
+                         backgroundColor: Colors.orange,
 
 
                        ),
