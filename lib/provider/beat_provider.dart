@@ -27,16 +27,8 @@ class BeatProvider extends ChangeNotifier {
 
 
   List<BeatModel> musicitems = [
-    BeatModel(
-        liked: false,
-        songname: "Zingaat",
-        songbg:"https://1.bp.blogspot.com/-eGV7ztBjiKM/XB4rheA0BcI/AAAAAAAAQwk/Q9jdvivvYjI9Ql7hsIox3y2eimttGevogCLcBGAs/s1600/Zingaat%2B%2528Sairat%2529.jpg",
-        songpath: Audio("assets/audio/zingaat.mp3")),
-    BeatModel(
-        liked: false,
-        songname: "Zindagi Aa Raha Hu Main",
-        songbg: "https://4.bp.blogspot.com/-PwG9tHMSJZs/VUydzlPyGzI/AAAAAAAAFdE/zlPqn4g-TWU/w680/Zindagi%2Baa%2Brha%2Bhoon%2Bmain.jpg",
-        songpath: Audio("assets/audio/zindagi.mp3")),
+    BeatModel(liked: false, songname: "Zingaat",songpath: Audio("assets/audio/zingaat.mp3"),songbg:"https://1.bp.blogspot.com/-eGV7ztBjiKM/XB4rheA0BcI/AAAAAAAAQwk/Q9jdvivvYjI9Ql7hsIox3y2eimttGevogCLcBGAs/s1600/Zingaat%2B%2528Sairat%2529.jpg",),
+    BeatModel(liked: false, songname: "Zindagi Aa Raha Hu Main",songpath: Audio("assets/audio/zindagi.mp3"),songbg: "https://4.bp.blogspot.com/-PwG9tHMSJZs/VUydzlPyGzI/AAAAAAAAFdE/zlPqn4g-TWU/w680/Zindagi%2Baa%2Brha%2Bhoon%2Bmain.jpg",),
     BeatModel(liked: false, songname: "Naacho Naacho",songpath: Audio("assets/audio/naacho.mp3"), songbg:"https://images.hindustantimes.com/img/2021/11/10/1600x900/RRR_1636548612389_1636548617309.PNG",),
     BeatModel(liked: false,songname: "Le Kachuko Le",songpath: Audio("assets/audio/le_kachuko.mp3"),songbg:"https://i.ytimg.com/vi/oDAMs9MJWJM/maxresdefault.jpg" ),
     BeatModel(liked: false,songname: "Machayenge",songpath: Audio("assets/audio/machayege.mp3"),songbg:"https://i.ytimg.com/vi/0SWeQzO78KE/maxresdefault.jpg" ),
@@ -72,30 +64,41 @@ class BeatProvider extends ChangeNotifier {
 
   void beatplay()
   {
-    isplay = true;
-    beatobject.play();
+    isplay = false;
+    beatobject.pause();
     notifyListeners();
   }
 
   void beatpause()
   {
-    isplay = false;
-    beatobject.pause();
+    isplay = true;
+    beatobject.play();
     notifyListeners();
   }
 
   void beatnext()
   {
     beatobject.next();
+
+    if(clickedmusic<musicitems.length-1)
+      {
+        clickedmusic++;
+      }
+    notifyListeners();
   }
   void beatprevious()
   {
     beatobject.previous();
+    if(clickedmusic>0)
+    {
+      clickedmusic--;
+    }
+    notifyListeners();
   }
 
   void beatclickwork()
   {
-    if(beatobject.isPlaying.value)
+    if(beatobject.isPlaying.value == false)
       {
         beatpause();
       }

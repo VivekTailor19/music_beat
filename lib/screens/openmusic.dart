@@ -18,6 +18,12 @@ class _Open_MusicState extends State<Open_Music> {
   BeatProvider? beatF;
 
   @override
+  void initState() {
+    Provider.of<BeatProvider>(context,listen: false).initmus();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
 
     beatT = Provider.of<BeatProvider>(context,listen: true);
@@ -80,7 +86,7 @@ class _Open_MusicState extends State<Open_Music> {
                    Row(
                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                      children: [
-                       Text("${position}",style: TextStyle(fontSize: 15,color: Colors.white),),
+                       Text("$position",style: TextStyle(fontSize: 15,color: Colors.white),),
                        Text("${beatT!.musiclength}",style: TextStyle(fontSize: 15,color: Colors.white),),
                      ],),
 

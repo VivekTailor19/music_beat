@@ -36,6 +36,7 @@ class _Beat_HomeState extends State<Beat_Home> {
             ],
 
             bottom: TabBar(
+              indicatorColor: Colors.white70,
               isScrollable: true,
               unselectedLabelColor: Colors.white70,
               unselectedLabelStyle: TextStyle(fontSize: 15),
