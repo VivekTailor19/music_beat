@@ -61,7 +61,7 @@ class _First_ScreenState extends State<First_Screen> {
 // Container(
 //   height: 60,
 //   decoration: BoxDecoration(
-//     color: Colors.black54,
+//     color: Color(0xff181A20)54,
 //     borderRadius: BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15))
 //   ),
 //   child:

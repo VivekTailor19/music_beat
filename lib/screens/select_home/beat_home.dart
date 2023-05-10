@@ -26,7 +26,7 @@ class _Beat_HomeState extends State<Beat_Home> {
           appBar: AppBar(
             elevation: 0,
             title: Text("Beat Box",style: TextStyle(fontSize: 25),),
-            backgroundColor: Colors.black,
+            backgroundColor: Color(0xff181A20),
 
             actions: [
               Padding(

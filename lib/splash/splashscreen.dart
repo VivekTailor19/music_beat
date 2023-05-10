@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_indicator/loading_indicator.dart';
+import 'package:music_beat/splash/splashprovider.dart';
+import 'package:provider/provider.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -10,10 +12,22 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
+  // SplashProvider? spT;
+  // SplashProvider? spF;
+
   @override
   Widget build(BuildContext context) {
+
+    // spT = Provider.of<SplashProvider>(context);
+    // spF = Provider.of<SplashProvider>(context,listen: false);
+
+    Future.delayed(Duration(seconds: 3),() {
+      Navigator.pushReplacementNamed(context, "page");
+    } );
+
     return SafeArea(
-      child: Scaffold(
+      child: Scaffold(backgroundColor: Color(0xff181A20),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

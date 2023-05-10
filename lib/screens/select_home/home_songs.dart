@@ -29,7 +29,7 @@ class _Home_SongsState extends State<Home_Songs> {
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xff181A20),
         body: ListView.builder(
           itemCount: beatF!.musicitems.length,
           itemBuilder: (context, index) {

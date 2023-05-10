@@ -34,7 +34,7 @@ class _Open_MusicState extends State<Open_Music> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.black,
+          backgroundColor: Color(0xff181A20),
           leading: IconButton(icon: Icon(Icons.arrow_back),iconSize: 25,color: Colors.white,onPressed: () => Navigator.pop(context),),
           actions: [Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -42,7 +42,7 @@ class _Open_MusicState extends State<Open_Music> {
           )],
         ),
         //backgroundColor: Colors.transparent,
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xff181A20),
 
         body: Column(
 
@@ -102,7 +102,7 @@ class _Open_MusicState extends State<Open_Music> {
                          beatT!.beatclickwork();
 
                        },
-                         child: Icon(beatT!.isplay == false ? Icons.play_arrow_rounded: Icons.pause,color: Colors.black,size: 45,),
+                         child: Icon(beatT!.isplay == false ? Icons.play_arrow_rounded: Icons.pause,color: Color(0xff181A20),size: 45,),
                          backgroundColor: Colors.orange,
 
 
