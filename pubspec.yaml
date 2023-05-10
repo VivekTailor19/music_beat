@@ -38,6 +38,7 @@ dependencies:
   provider: ^6.0.5
   sizer: ^2.0.15
   assets_audio_player: ^3.0.6
+  loading_indicator: ^3.1.0
 
 
 
@@ -69,6 +70,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/audio/
+    - assets/images/
     - assets/images/setting/
 
   # An image asset can refer to one or more resolution-specific "variants", see

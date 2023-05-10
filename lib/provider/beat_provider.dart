@@ -89,11 +89,17 @@ class BeatProvider extends ChangeNotifier {
 
   void beatprevious()
   {
-    beatobject.previous();
-    if(clickedmusic>0)
+
+    if(clickedmusic>=0)
     {
       clickedmusic--;
+      if(clickedmusic < 0)
+        {
+          clickedmusic = musicitems.length-1;
+        }
     }
+    beatobject.previous();
+
     notifyListeners();
   }
 
