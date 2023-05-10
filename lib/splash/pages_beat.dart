@@ -14,29 +14,29 @@ class Pages_Beat extends StatefulWidget {
 
 class _Pages_BeatState extends State<Pages_Beat> {
 
-  // SplashProvider? spT;
-  // SplashProvider? spF;
+  SplashProvider? spT;
+  SplashProvider? spF;
 
   @override
   Widget build(BuildContext context) {
 
-    // spT = Provider.of<SplashProvider>(context);
-    // spF = Provider.of<SplashProvider>(context,listen: false);
+    spT = Provider.of<SplashProvider>(context);
+    spF = Provider.of<SplashProvider>(context,listen: false);
 
     return SafeArea(
       child: Scaffold(
         body: Stack(
           children: [
-            Image.asset(
-              "assets/images/setting/setting_offer.png",
-              height: 100.h,
+            Image.network(
+              "${spT!.pageitems[spT!.pageno].pagesimg}",
+              height: 60.h,
               width: 100.w,
               fit: BoxFit.fill,
             ),
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
-                height: 40.h,
+                height: 50.h,
                 width: 100.w,
                 decoration: BoxDecoration(
                   color: Color(0xff181A20),
@@ -46,18 +46,19 @@ class _Pages_BeatState extends State<Pages_Beat> {
                   ),
                 ),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
+                    SizedBox(height: 15),
                     Text(
-                      "Hello World",
+                      "${spT!.pageitems[spT!.pageno].pagestext}",
                       style: TextStyle(fontSize: 35,color: Colors.white),
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 20,),
                     AnimatedSmoothIndicator(
 
-                      activeIndex: 0,
-                      count: 3,
+                      activeIndex: spT!.pageno,
+                      count: spF!.pageitems.length,
                       effect: ExpandingDotsEffect(
                         spacing: 5,
                         activeDotColor: Colors.orange,
@@ -70,17 +71,22 @@ class _Pages_BeatState extends State<Pages_Beat> {
 
                     SizedBox(height: 20,),
 
-                    Container(height: 60,width: 275,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(45),
-                          boxShadow: [BoxShadow(color: Colors.orange.shade200,blurRadius: 15)],
-                          color: Colors.orange
+                    InkWell(
+                      onTap: () {
 
-                      ),
-                      alignment: Alignment.center,
-                      child: Text(
-                        "Next",
-                        style: TextStyle(fontSize: 25, color: Colors.white),
+                      },
+                      child: Container(height: 60,width: 275,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(45),
+                            boxShadow: [BoxShadow(color: Colors.orange.shade200,blurRadius: 15)],
+                            color: Colors.orange
+
+                        ),
+                        alignment: Alignment.center,
+                        child: Text(
+                          "${spT!.pageitems[spT!.pageno].pagebutton}",
+                          style: TextStyle(fontSize: 25, color: Colors.white),
+                        ),
                       ),
                     ),
                     SizedBox(height: 10,),

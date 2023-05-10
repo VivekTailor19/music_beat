@@ -15,7 +15,7 @@ class SplashProvider extends ChangeNotifier
     SplashModel(pagebutton: "Get Started",pagestext: "Listen to the best\naudio & music with\nMusicBeat now!",pagesimg: "https://img.freepik.com/free-photo/attractive-smiling-happy-woman-dancing-listening-music-headphones-hipster-stylish-outfit-isolated-blue-studio-background-wearing-shorts-yellow-sweater_285396-7042.jpg?size=626&ext=jpg" ),
   ];
 
-  int pageno = 0;
+  int pageno = 1;
 
   void changepage(int newpage)
   {

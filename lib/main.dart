@@ -4,6 +4,7 @@ import 'package:music_beat/provider/beat_provider.dart';
 import 'package:music_beat/screens/openmusic.dart';
 import 'package:music_beat/screens/select_setting/beat_setting.dart';
 import 'package:music_beat/splash/pages_beat.dart';
+import 'package:music_beat/splash/splashprovider.dart';
 import 'package:music_beat/splash/splashscreen.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
@@ -17,9 +18,8 @@ void main() {
     Sizer(
       builder: (context, orientation, deviceType) => MultiProvider(
         providers: [
-          ChangeNotifierProvider(
-            create: (context) => BeatProvider(),
-          )
+          ChangeNotifierProvider(create: (context) => BeatProvider(),),
+          ChangeNotifierProvider(create: (context) => SplashProvider(),),
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
