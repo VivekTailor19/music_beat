@@ -37,12 +37,7 @@ class BeatProvider extends ChangeNotifier {
         songname: "Zindagi Aa Raha Hu Main",
         songbg: "https://4.bp.blogspot.com/-PwG9tHMSJZs/VUydzlPyGzI/AAAAAAAAFdE/zlPqn4g-TWU/w680/Zindagi%2Baa%2Brha%2Bhoon%2Bmain.jpg",
         songpath: Audio("assets/audio/zindagi.mp3")),
-    BeatModel(
-        liked: false,
-        songname: "Naacho Naacho",
-        songbg:
-            "https://images.hindustantimes.com/img/2021/11/10/1600x900/RRR_1636548612389_1636548617309.PNG",
-        songpath: Audio("assets/audio/naacho.mp3")),
+    BeatModel(liked: false, songname: "Naacho Naacho",songpath: Audio("assets/audio/naacho.mp3"), songbg:"https://images.hindustantimes.com/img/2021/11/10/1600x900/RRR_1636548612389_1636548617309.PNG",),
     BeatModel(liked: false,songname: "Le Kachuko Le",songpath: Audio("assets/audio/le_kachuko.mp3"),songbg:"https://i.ytimg.com/vi/oDAMs9MJWJM/maxresdefault.jpg" ),
     BeatModel(liked: false,songname: "Machayenge",songpath: Audio("assets/audio/machayege.mp3"),songbg:"https://i.ytimg.com/vi/0SWeQzO78KE/maxresdefault.jpg" ),
     BeatModel(liked: false,songname: "Kalu Re Kundaru",songpath: Audio("assets/audio/kalu_re_kundaru.mp3"),songbg:"https://i.ytimg.com/vi/7eHzP2Q7y3s/maxresdefault.jpg" ),
