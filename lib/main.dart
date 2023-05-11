@@ -23,10 +23,10 @@ void main() {
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-           initialRoute: "splash",
+           //initialRoute: "splash",
           routes: {
             "splash":(context) => SplashScreen(),
-           // "/": (context) => First_Screen(),
+            "/": (context) => First_Screen(),
             "first": (context) => First_Screen(),
             "openmusic":(context) => Open_Music(),
             "setting":(context) => Beat_Setting(),

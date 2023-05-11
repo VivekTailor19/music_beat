@@ -74,11 +74,14 @@ class _Pages_BeatState extends State<Pages_Beat> {
                     InkWell(
                       onTap: () {
 
+
                       },
                       child: Container(height: 60,width: 275,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(45),
-                            boxShadow: [BoxShadow(color: Colors.orange.shade200,blurRadius: 15)],
+                            boxShadow: [
+                              BoxShadow(color: Colors.orange.shade50,blurRadius: 10),
+                              ],
                             color: Colors.orange
 
                         ),
