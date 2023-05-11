@@ -1,3 +1,5 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:music_beat/provider/beat_provider.dart';
@@ -14,8 +16,10 @@ import 'first_screen/first_screen.dart';
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent,systemNavigationBarColor: Colors.black87));
   runApp(
-    
-    Sizer(
+    DevicePreview(
+      enabled: !kReleaseMode,
+      builder: (context) =>
+          Sizer(
       builder: (context, orientation, deviceType) => MultiProvider(
         providers: [
           ChangeNotifierProvider(create: (context) => BeatProvider(),),
@@ -23,7 +27,7 @@ void main() {
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-           //initialRoute: "splash",
+           initialRoute: "splash",
           routes: {
             "splash":(context) => SplashScreen(),
             "/": (context) => First_Screen(),
@@ -42,5 +46,6 @@ void main() {
         ),
       ),
     ),
+     ),
   );
 }

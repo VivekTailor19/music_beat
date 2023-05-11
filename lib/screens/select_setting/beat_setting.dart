@@ -70,7 +70,7 @@ class _Beat_SettingState extends State<Beat_Setting> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left:8.0,top: 15),
-                      child: Column(
+                      child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(

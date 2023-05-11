@@ -25,7 +25,7 @@ class _Beat_HomeState extends State<Beat_Home> {
         child: Scaffold(
           appBar: AppBar(
             elevation: 0,
-            title: Text("Beat Box",style: TextStyle(fontSize: 25),),
+            title: Text("Beat Box",style: TextStyle(fontSize: 25,color: Colors.orange),),
             backgroundColor: Color(0xff181A20),
 
             actions: [

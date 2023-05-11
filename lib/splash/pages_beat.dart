@@ -27,11 +27,17 @@ class _Pages_BeatState extends State<Pages_Beat> {
       child: Scaffold(
         body: Stack(
           children: [
-            Image.network(
-              "${spT!.pageitems[spT!.pageno].pagesimg}",
-              height: 60.h,
+            Container(height: 60.h,
               width: 100.w,
-              fit: BoxFit.fill,
+              color: Colors.orange,
+              //decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/s/setting_offer.png"))),
+              child: Image.asset(
+                "${spT!.pageitems[spT!.pageno].pagesimg}",
+                height: 60.h,
+                width: 100.w,
+                fit: BoxFit.fitWidth,
+
+              ),
             ),
             Align(
               alignment: Alignment.bottomCenter,

@@ -24,6 +24,7 @@ class _Home_SongsState extends State<Home_Songs> {
 
   @override
   Widget build(BuildContext context) {
+
     beatT = Provider.of<BeatProvider>(listen: true, context);
     beatF = Provider.of<BeatProvider>(listen: false, context);
 

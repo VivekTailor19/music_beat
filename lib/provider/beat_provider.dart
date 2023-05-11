@@ -103,6 +103,7 @@ class BeatProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+
   void beatclickwork()
   {
     if(beatobject.isPlaying.value == false)

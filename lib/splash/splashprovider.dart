@@ -21,7 +21,7 @@ class SplashProvider extends ChangeNotifier
     SplashModel(pagebutton: "Get Started",pagestext: "Listen to the best\naudio & music with\nMusicBeat now!",pagesimg: "assets/images/splash/slides(3).png" ),
   ];
 
-  int pageno = 1;
+  int pageno = 2;
 
   void changepage(int newpage)
   {
