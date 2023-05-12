@@ -22,8 +22,8 @@ class _SplashScreenState extends State<SplashScreen> {
     // spT = Provider.of<SplashProvider>(context);
     // spF = Provider.of<SplashProvider>(context,listen: false);
 
-    Future.delayed(Duration(seconds: 3),() {
-      Navigator.pushReplacementNamed(context, "page");
+    Future.delayed(Duration(seconds: 4),() {
+      Navigator.pushReplacementNamed(context, "page1");
     } );
 
     return SafeArea(

@@ -5,7 +5,10 @@ import 'package:flutter/services.dart';
 import 'package:music_beat/provider/beat_provider.dart';
 import 'package:music_beat/screens/openmusic.dart';
 import 'package:music_beat/screens/select_setting/beat_setting.dart';
-import 'package:music_beat/splash/pages_beat.dart';
+import 'package:music_beat/splash/Pages/pages_beat.dart';
+import 'package:music_beat/splash/Pages/pages_beat1.dart';
+import 'package:music_beat/splash/Pages/pages_beat2.dart';
+import 'package:music_beat/splash/Pages/pages_beat3.dart';
 import 'package:music_beat/splash/splashprovider.dart';
 import 'package:music_beat/splash/splashscreen.dart';
 import 'package:provider/provider.dart';
@@ -35,6 +38,9 @@ void main() {
             "openmusic":(context) => Open_Music(),
             "setting":(context) => Beat_Setting(),
             "page":(context) => Pages_Beat(),
+            "page1":(context) => Pages_Beat1(),
+            "page2":(context) => Pages_Beat2(),
+            "page3":(context) => Pages_Beat3(),
 
           },
           theme: ThemeData(
