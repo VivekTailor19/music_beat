@@ -5,9 +5,10 @@
  
 
 https://github.com/VivekTailor19/music_beat/assets/119835214/33558d94-75ad-45f1-96e0-659bc3f8ded9
+ 
 <br><br><br>
 
-<img src = "" width = "360" height = "650">
+
   
 <img src = "https://github.com/VivekTailor19/music_beat/assets/119835214/f51df310-50e9-401b-8e8c-dbdc8b1a5158" width = "360" height = "650">
   
