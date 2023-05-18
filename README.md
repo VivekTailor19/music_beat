@@ -25,10 +25,10 @@ https://github.com/VivekTailor19/music_beat/assets/119835214/33558d94-75ad-45f1-
 
 <br>
   
-<img src = "https://github.com/VivekTailor19/music_beat/assets/119835214/8af74eeb-d865-402c-a240-b4abf3f0849b" width = "310" height = "550">
-<img src = "https://github.com/VivekTailor19/music_beat/assets/119835214/462146ad-2628-464d-b70a-621ed7f98081" width = "310" height = "550">
+<img src = "https://github.com/VivekTailor19/music_beat/assets/119835214/8af74eeb-d865-402c-a240-b4abf3f0849b" width = "290" height = "550">
+<img src = "https://github.com/VivekTailor19/music_beat/assets/119835214/462146ad-2628-464d-b70a-621ed7f98081" width = "290" height = "550">
   <br>
-<img src = "https://github.com/VivekTailor19/music_beat/assets/119835214/afade09e-5d78-4478-b631-08b15c001b65" width = "310" height = "550">
-<img src = "https://github.com/VivekTailor19/music_beat/assets/119835214/64f97587-4867-4b3e-9618-4c74161e9b31" width = "310" height = "550">
+<img src = "https://github.com/VivekTailor19/music_beat/assets/119835214/afade09e-5d78-4478-b631-08b15c001b65" width = "290" height = "550">
+<img src = "https://github.com/VivekTailor19/music_beat/assets/119835214/64f97587-4867-4b3e-9618-4c74161e9b31" width = "290" height = "550">
 
 </p>
